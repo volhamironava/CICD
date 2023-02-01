@@ -34,6 +34,8 @@ jobs:
     - name: Deploy
       run: |
         git add .
+        git config --global user.email "you@example.com"
+        git config --global user.name "CICD"
         git commit -m "cicd"
         git push
         
