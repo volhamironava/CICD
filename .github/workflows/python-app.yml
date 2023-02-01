@@ -30,5 +30,12 @@ jobs:
         pip install sphinx
     - name: Build
       run: |
-        sphinx-build -b html ./source/ build/
+        sphinx-build -b html ./source/ docs/
+    - name: Deploy
+      run: |
+        git add .
+        git commit -m "cicd"
+        git push
+        
+      
 
